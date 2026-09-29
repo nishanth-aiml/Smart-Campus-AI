@@ -127,7 +127,32 @@ Open browser at `http://localhost:5173`.
 
 ---
 
-## ⚙️ Environment Variables
+## ⚡ Deployment on Vercel
+
+The project is configured for one-click deployment on **Vercel** with full serverless API support:
+
+### Option A: Deploy via Vercel CLI
+
+```bash
+cd smart-campus
+npx vercel
+```
+- Follow the interactive prompts to link your Vercel account and project.
+- For production deployment, run: `npx vercel --prod`
+
+### Option B: Deploy via GitHub & Vercel Dashboard
+
+1. Push the `smart-campus/` repository to **GitHub**.
+2. Go to [vercel.com/new](https://vercel.com/new) and click **Import**.
+3. Select your repository.
+4. The root [`vercel.json`](file:///c:/Users/Nishanth/Desktop/smart/smart-campus/vercel.json) will automatically configure:
+   - **Framework Preset**: Vite
+   - **Build Command**: `npm run build --prefix frontend`
+   - **Output Directory**: `frontend/dist`
+   - **Serverless API**: Handled automatically via `/api/index.js`
+5. Click **Deploy**. Your Smart Campus application will be live globally in under 1 minute!
+
+---
 
 | Variable | Service | Description | Default |
 | :--- | :--- | :--- | :--- |
